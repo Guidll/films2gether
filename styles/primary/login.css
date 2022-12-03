@@ -1,0 +1,126 @@
+@import url(../reset.css);
+@import url(../colors.css);
+
+body {
+    place-items: center;
+    display: grid;
+    color: var(--clr-text);
+    background-size: 50%;
+    background-image: url(../../images/capa-filmes-bg.jpg);
+    
+}
+
+.black-mask {
+    z-index: -1;
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .85);
+}
+
+.primary-container {
+    max-width: 400px;
+    padding: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    font-family: Nunito;
+    flex-direction: column;
+    display: flex;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.primary-container__logo {
+    width: 230px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    backdrop-filter: blur(3px);
+}
+
+.container-form {
+    gap: 1rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.container-form__title {
+    font-size: 1.8rem;
+}
+
+.container-form__email, 
+.container-form__password,
+.container-form__btn {
+    padding: .7rem;
+    color: var(--clr-text);
+    border-radius: .2rem;
+    border: 1px solid transparent;
+    background-color: var(--clr-bg-input);
+} 
+.container-form__email::placeholder, 
+.container-form__password::placeholder {
+    color: var(--clr-text-input);
+} 
+
+.container-form__email:hover, 
+.container-form__password:hover,
+.container-form__email:focus, 
+.container-form__password:focus {
+    transition: 1s;
+    border-left: 1px solid white;
+}
+
+
+.container-form__btn {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--clr-text);
+    background-color: hsl(216, 100%, 30%);
+}
+.container-form__btn:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: var(--clr-logo);
+}
+.container-form__btn:active {
+    background-color: var(--clr-logo);
+}
+
+.container-form__remember {
+    justify-content: space-between;
+    display: flex;
+    color: var(--clr-text-input);
+    align-items: center;
+}
+
+.container-form__remember label {
+    font-size: .9rem;
+}
+
+.container-form__remember a {
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--clr-text-input);
+}
+
+.primary-container__new-sign {
+    margin-top: 1rem;
+    gap: .5rem;
+    flex-direction: column;
+    display: flex;
+}
+.primary-container__new-sign a {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+.primary-container__new-sign p {
+    color: var(--clr-text-input);
+}
+
+.primary-container__new-sign p:nth-child(2) {
+    font-size: .8rem;
+}
+.primary-container__new-sign p:nth-child(2) a {
+    color: hsl(216, 100%, 70%);
+}
+
