@@ -1,11 +1,14 @@
 :root {
   /* background color */
-  --bg-body: hsl(0, 0%, 90%);
+  --bg-body: hsl(0, 0%, 2%);
   --bg-btn: hsl(0, 0%, 70%);
   --bg-btn-primary: hsl(357, 92%, 47%);
   
   /* color */
-  --clr-body: hsl(0, 0%, 90%);
+  --clr-logo: hsl(216, 100%, 40%);
+  --clr-text: hsl(0, 0%, 90%);
+  --clr-bg-input: hsl(0, 0%, 20%);
+  --clr-text-input: hsl(0, 0%, 60%);
   --clr-btn: hsl(0, 0%, 0%);
   --clr-btn-primary: hsl(0, 0%, 90%);
 }
