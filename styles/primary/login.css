@@ -3,10 +3,11 @@
 
 body {
     place-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
     color: var(--clr-text);
     background-size: 50%;
-    background-image: url(../../images/capa-filmes-bg.jpg);
+    background-image: url(../../images/bg-filmes-login.jpg);
     
 }
 
@@ -19,23 +20,25 @@ body {
 }
 
 .primary-container {
-    max-width: 400px;
+    max-width: 385px;
     padding: 2rem;
     justify-content: center;
     gap: 3rem;
     font-family: Nunito;
     flex-direction: column;
     display: flex;
+    box-shadow: 0px 0px 1px #7ac3ee;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, .8);
 }
 
 .primary-container__logo {
-    width: 230px;
-    top: 10px;
-    left: 10px;
+    width: 18vw;
+    top: .8rem;
+    min-width: 220px;
+    max-width: 260px;
+    left: .8rem;
     position: absolute;
-    backdrop-filter: blur(3px);
 }
 
 .container-form {
@@ -50,7 +53,8 @@ body {
 
 .container-form__email, 
 .container-form__password,
-.container-form__btn {
+.container-form__btn-submit {
+    width: 100%;
     padding: .7rem;
     color: var(--clr-text);
     border-radius: .2rem;
@@ -62,27 +66,58 @@ body {
     color: var(--clr-text-input);
 } 
 
-.container-form__email:hover, 
-.container-form__password:hover,
+.container-form .container-form__tosee-password {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+.tosee-password__btn-eye {
+    z-index: 1;
+    width: 20px;
+    top: 5px;
+    right: 15px;
+    position: absolute;
+    height: 20px;
+    border: none;
+    background: none;
+}
+
+/* to see password */
+[svg-eye="see"],
+[svg-eye="hide"] {
+    width: 20px;
+    right: 0;
+    position: absolute;
+    opacity: .7;    
+    cursor: pointer;
+}
+[svg-eye="hide"] {
+    display: none;
+}
+
+.container-form__email, 
+.container-form__password {
+    transition: .3s;
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
 .container-form__email:focus, 
 .container-form__password:focus {
-    transition: 1s;
-    border-left: 1px solid white;
+    transition: .3s;
+    border-left: 2px solid rgb(60, 120, 250);
 }
 
 
-.container-form__btn {
+.container-form__btn-submit {
     margin-top: 1rem;
     font-size: 1.1rem;
-    color: var(--clr-text);
     background-color: hsl(216, 100%, 30%);
 }
-.container-form__btn:hover {
+.container-form__btn-submit:hover {
     transition: .3s;
     cursor: pointer;
     background-color: var(--clr-logo);
 }
-.container-form__btn:active {
+.container-form__btn-submit:active {
     background-color: var(--clr-logo);
 }
 
@@ -102,9 +137,11 @@ body {
     font-size: .9rem;
     color: var(--clr-text-input);
 }
+.container-form__remember a:hover {
+    text-decoration: underline;
+}
 
 .primary-container__new-sign {
-    margin-top: 1rem;
     gap: .5rem;
     flex-direction: column;
     display: flex;
@@ -113,14 +150,18 @@ body {
     text-decoration: none;
     color: var(--clr-text);
 }
+
 .primary-container__new-sign p {
     color: var(--clr-text-input);
 }
 
-.primary-container__new-sign p:nth-child(2) {
+.primary-container__new-sign .new-sign__recaptcha {
     font-size: .8rem;
 }
-.primary-container__new-sign p:nth-child(2) a {
+.primary-container__new-sign .new-sign__recaptcha a {
     color: hsl(216, 100%, 70%);
+}
+.primary-container__new-sign .new-sign__recaptcha a:hover {
+    text-decoration: underline;
 }
 
